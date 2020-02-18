@@ -1,0 +1,286 @@
+
+/* 一.统一样式: */
+  /* ul去圆点标识符 */
+  ul {
+    list-style: none;
+  }
+  /* 整个容器样式 */
+  html,body,#container{
+    width: 100%;
+    padding:0;
+    margin:0;
+    height: 100%;
+    background-color: #c9152e;
+    /* 不显示滚动条 纵向溢出隐藏 */
+    overflow: hidden;
+  }
+
+  /* banner背景层样式 */
+  div#banner{
+    background-image: url('../images/img_prize/bg_prize.png');
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    background-size: 100%;
+    background-position: top center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+  }
+  /* banner图上具体内容的整体样式 */
+  div#topContent {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 35%;
+    height: 100%;
+  }
+
+/* 二.单独样式: */
+  /* 文字列表的样式 */
+  ul.list {
+    font-size: 0.285rem;
+    color: white;
+    text-align: center;
+  }
+  /* 每行文字的样式 */
+  li.item {
+    padding: 0.18rem 0rem;
+  }
+  /* 中间图片的样式 */
+  .item img {
+    width: 1.3rem;
+    margin: 0rem 0.25rem;
+  }
+  /* 中部图片中间动态数字的样式 */
+  span.dyNUM {
+    position: fixed;
+    font-size: 0.3rem;
+    left: 3.45rem;
+    top: 7rem;
+    
+  }
+  /* 底部文字的样式 */
+  div#text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 0rem 1.5rem;
+    border-radius: 0.15rem;
+    position: relative;
+    bottom: -0.7rem;
+    cursor: pointer;
+    font-size: 0.35rem;
+    top: 4.9rem;
+  }
+  /* 底部文字a标签的样式 */
+  #text a {
+    color: #c9152e;
+    padding: 0.08rem 0rem;
+  }
+  /* 底部卡片的整体样式 */
+  li#card {
+    display: flex;
+    left: 0.55rem;
+    top: 5.5rem;
+    margin-right: 0.5rem;
+  }
+  /* 底部卡片图的样式 */
+  #card img {
+    width: 1rem;
+    margin: 0rem 0.1rem;
+  }
+  /* 底部动态数字的公共样式 */
+  #card span.dyNO {
+    font-size: 0.35rem;
+    position: relative;
+    bottom: 0.75rem;
+  }
+
+  /*卡牌摆动动画*/
+#list li.active {
+  background-image: url("./images/img_prize/bh_behind.png");
+  -o-animation: shaking 0.5s ease-in-out;
+  -ms-animation: shaking 0.5s ease-in-out;
+  -moz-animation: shaking 0.5s ease-in-out;
+  -webkit-animation: shaking 0.5s ease-in-out;
+  animation: shaking 0.5s ease-in-out;
+}
+li.item {
+    padding: 0.18rem 0rem;
+    position: absolute;
+    left: 4.08rem;
+    /*4.04*/
+    top: 3.35rem;
+}
+/*卡牌翻开动画*/
+#list li.open-card {
+  left: 3.64rem !important;
+  top: 0 !important;
+  z-index: 10;
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  -o-animation: openCard .5s .5s linear forwards;
+  -ms-animation: openCard .5s .5s linear forwards;
+  -moz-animation: openCard .5s .5s linear forwards;
+  -webkit-animation: openCard .5s .5s linear forwards;
+  animation: openCard .5s .5s linear forwards;
+}
+
+/* 遮罩层样式*/
+div#mask-card {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* 遮罩层关闭按钮图片的样式 */
+img#closeBtn {
+  width: 0.4rem;
+  height: 0.4rem;
+  position: relative;
+  z-index: 3;
+  left: 5rem;
+  top: 4rem;
+  animation:turn 1s linear; /* 调用名称为turn的动画 */
+}
+
+/* 设置转圈动画 */
+@keyframes turn{
+  0%{-webkit-transform:rotate(0deg);}
+  25%{-webkit-transform:rotate(90deg);}
+  50%{-webkit-transform:rotate(180deg);}
+  75%{-webkit-transform:rotate(270deg);}
+  100%{-webkit-transform:rotate(360deg);}
+}
+
+/* 发光图的样式 */
+img#blink {
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+  top: -6rem;
+  left: -0.2rem;
+  opacity: 0.5;
+  animation:turn 5s linear infinite;  /* 调用名称为turn的动画 */
+}
+
+#dy{
+  display: inline-block;
+  z-index: 9;
+  position: absolute;
+  left: 0.75rem;
+  top: 0.55rem;
+  font-size: 0.5rem;
+  color: #fff;
+}
+/* 翻奖后点缀图的样式 */
+img#dianzhui {
+  width: 7rem;
+  height: 8rem;
+  position: relative;
+  top: 2rem;
+  left: 0.4rem;
+}
+
+
+/* ①定义发牌轨迹位移动画 */
+@keyframes move1{
+  0% { transform: translate(4.08rem, 3.35rem); }
+  101% { transform: translate(0.26rem, 0.23rem); } 
+}
+@keyframes move2{
+  0% { transform: translate(1.88rem, 3.12rem); }
+  101% { transform: translate(2.2rem, 0.23rem); }
+}
+@keyframes move3{
+  0% { transform: translate(0rem, 3.12rem); }
+  101% { transform: translate(4.08rem, 0.23rem); }
+}
+@keyframes move4{
+  0% { transform: translate(3.82rem, 1.56rem); }
+  101% { transform: translate(0.26rem, 1.79rem); }
+}
+@keyframes move5{
+  0% { transform: translate(1.88rem, 1.56rem); }
+  101% { transform: translate(2.2rem, 1.79rem); }
+}
+@keyframes move6{
+  0% { transform: translate(0rem, 1.56rem); }
+  101% { transform: translate(4.08rem, 1.79rem); }
+}
+@keyframes move7{
+  0% { transform: translate(3.82rem, 0rem); }
+  101% { transform: translate(0.26rem, 3.35rem); }
+}
+@keyframes move8{
+  0% { transform: translate(1.88rem, 0rem); }
+  101% { transform: translate(2.2rem, 3.35rem); }
+}
+
+/* ②中间每个卡片调用位移动画 */
+#list li.item.cartoon:first-child {
+  animation: move1 0.3s;
+  left: 0.26rem !important;
+  top: 0.23rem !important;
+}
+#list li.item.cartoon:nth-child(2) {
+  animation: move2 0.3s;
+  left: 2.2rem !important;
+  top: 0.23rem !important;
+}
+#list li.item.cartoon:nth-child(3) {
+  animation: move3 0.3s;
+  left: 4.08rem !important;
+  top: 0.23rem !important;
+}
+#list li.item.cartoon:nth-child(4) {
+  animation: move4 0.3s;
+  left: 0.26rem !important;
+  top: 1.79rem !important;
+}
+#list li.item.cartoon:nth-child(5) {
+  animation: move5 0.3s;
+  left: 2.2rem !important;
+  top: 1.79rem !important;
+}
+#list li.item.cartoon:nth-child(6) {
+  animation: move6 0.3s;
+  left: 4.08rem !important;
+  top: 1.79rem !important;
+}
+#list li.item.cartoon:nth-child(7) {
+  animation: move7 0.3s;
+  left: 0.26rem !important;
+  top: 3.35rem !important;
+}
+#list li.item.cartoon:nth-child(8) {
+  animation: move8 0.3s;
+  left: 2.2rem !important;
+  top: 3.35rem !important;
+}
+
+
+/* 设置卡牌轮流选中的摇晃动画 */
+@keyframes activeShake{
+  0%{-webkit-transform:rotate(0deg);}
+  25%{-webkit-transform:rotateY(30deg);}
+  50%{-webkit-transform:rotateY(0deg);}
+  75%{-webkit-transform:rotateY(30deg);}
+  100%{-webkit-transform:rotateY(0deg);}
+}
+/* 调用卡牌轮流选中的摇晃动画 */
+#list .active {
+  animation: activeShake 1.5s;
+}
+
+
+

@@ -1,0 +1,79 @@
+
+/* 一.统一样式: */
+  /* ul去圆点标识符 */
+  ul {
+    list-style: none;
+  }
+  /* 整个容器样式 */
+  html,body,#container{
+    width: 100%;
+    padding:0;
+    margin:0;
+    height: 100%;
+    background-color: #c9152e;
+    /* 不显示滚动条 纵向溢出隐藏 */
+    overflow-y: hidden;
+  }
+
+  /* banner背景层样式 */
+  div#banner{
+    background-image: url('../images/img_info/bg_info.png');
+    height: 13.3rem;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    background-position: center center;
+    background-size: 100%;
+  }
+  /* banner图上具体内容的整体样式 */
+  div#topContent {
+    width: 80%;
+    height: 2.9rem;
+    margin: 0 auto;
+    position: relative;
+    top: 45%;
+  }
+
+/* 二.单独样式: */
+  /* 文字列表的样式 */
+  ul#list {
+    font-size: 0.285rem;
+    color: white;
+    text-align: center;
+  }
+  /* 每行文字的样式 */
+  li.item {
+    padding: 0.18rem 0rem;
+  }
+  
+  /* 按钮的样式 */
+  div#btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 0rem 0.7rem;
+    border-radius: 0.15rem;
+    position: relative;
+    bottom: -0.7rem;
+    cursor: pointer;
+  }
+  /* 按钮内部a标签的样式 */
+  #btn a {
+    font-size: 0.35rem;
+    color: #c9152e;
+    padding: 0.08rem 0rem;
+  }
+  /* 输入框前文字的样式 */
+  .item span {
+    font-size: 0.35rem;
+    margin-right:0.15rem;
+  }
+  /* input输入框的样式 */
+  input[type="text"] {
+    border-radius: 0.15rem;
+    height: 0.618rem;
+    width: 3.6rem;
+    padding-left: 0.3rem;
+  }
+
+  

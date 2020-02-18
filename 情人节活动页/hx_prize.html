@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+   <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+   <meta content="no-cache" http-equiv="pragma">
+   <meta content="0" http-equiv="expires">
+   <meta content="telephone=no, address=no" name="format-detection">
+   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />  
+
+  <title>huaxia_valentine</title>
+  <!-- 根据屏幕计算，必须写在上面 -->
+  <script src="./js/calc.js"></script>
+
+  <!-- 引入动画相关文件 -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper.jquery.min.js"></script>
+  <script src="js/animate.js"></script>
+
+  <!-- 清除默认样式，解决兼容性问题 -->
+  <link rel="stylesheet" href="./css/common.css">
+
+  <!-- 单独的样式文件(重命名) -->
+  <link rel="stylesheet" href="./css/style_prize.css">
+
+</head>
+
+<body>
+ 
+  <!-- 牌点击后出现的遮罩层及图片 -->
+  <div id="mask-card" style='display:none'>
+    <img src="./images/img_prize/close.png" id='closeBtn' style='display:none'>
+    <img src="./images/img_prize/dianzhui.png" id='dianzhui' style='display:none'>
+    <img src="./images/img_prize/blink.png" id='blink' style='display:none'>
+
+  </div>
+
+  <div id="container">
+    <!-- 一.顶部banner图区域 -->
+    <div id="banner">
+      <div id="topContent">
+        <ul class ="list" id="list">
+ 
+          <li class="item">
+            <span>
+              <img src="./images/img_prize/bh_behind.png">
+            </span>
+          </li>
+          <li class="item">
+            <span>
+              <img src="./images/img_prize/bh_behind.png">
+            </span>
+          </li>
+          <li class="item">
+            <span>
+              <img src="./images/img_prize/bh_behind.png">
+            </span>
+          </li>
+          <li class="item">
+            <span>
+              <img src="./images/img_prize/bh_behind.png">
+            </span>
+          </li>
+
+          <li class="item">
+            <span>
+              <img src="./images/img_prize/bh_behind.png">
+            </span>
+          </li>
+
+          <li class="item">
+            <span>
+              <img src="./images/img_prize/bh_behind.png">
+            </span>
+          </li>
+          <li class="item">
+            <span>
+              <img src="./images/img_prize/bh_behind.png">
+            </span>
+          </li>
+          <li class="item">
+            <span>
+              <img src="./images/img_prize/bh_behind.png">
+            </span>
+          </li>
+          <li class="item" id="fix">
+            <span>
+              <img src="./images/img_prize/bh_behind.png">
+            </span>
+          </li>
+        </ul>
+
+        <div id="text">
+          <!-- <a href="./hx_confirm.html">您已集齐卡片，请确认您的信息进行领奖。</a> -->
+          <!-- 未集齐数字时显示原来的文字；只有集齐1314才显示'我要抽奖'并跳转到大转盘进行抽奖。 -->
+          <a href="./hx_info.html" style='display:inline-block;'>我的卡片</a>
+          <a href="javascript:;" style='display:none;'>我要抽奖</a>
+        </div>
+
+        <ul class="list">
+          <li class="item" id='card'>
+            <span>
+              <img src="./images/img_prize/sh_grey.png" id='firstImg'>
+              <span class='dyNO' id='firstNO'>1</span>
+            </span>
+            
+            <span>
+              <img src="./images/img_prize/sh_grey.png" id='secondImg'>
+              <span class='dyNO' id='secondNO'>3</span>
+            </span>
+            
+            <span>
+              <img src="./images/img_prize/sh_grey.png" id='thirdImg'>
+              <span class='dyNO' id='thirdNO'>1</span>
+            </span>
+
+            <span>
+              <img src="./images/img_prize/sh_grey.png" id='fourthImg'>
+              <span class='dyNO' id='fourthNO'>4</span>
+            </span>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
